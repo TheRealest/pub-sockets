@@ -8,23 +8,26 @@
 
 ### MVP
 
-- Views
-  - AppView
-    - HintView (x2)
-    - TimerView
-    - QuestionView
-      - AnswerView
-        -AnswerEntryView (x4)
-- Controllers
-  - LobbyController
-  - QuizController
-- Services
-  - QuizService
-
+- Client
+  - Views
+    - AppView
+      - HintView (x2)
+      - TimerView
+      - QuestionView
+        - AnswerView
+          -AnswerEntryView (x4)
+  - Controllers
+    - LobbyController
+    - QuizController
+  - Models
+    - QuizModel
+  - Sockets
+    - ClientSocketManager
 - Server
-  - Database (MongoDB)
+  - DatabaseManager (MongoDB)
     - Questions
       - Hints
       - Answers
-  - SocketIO
-  - Express (static file server)
+  - ServerSocketManager (SocketIO)
+  - Static File Server (Express)
+  - Router (Express)
