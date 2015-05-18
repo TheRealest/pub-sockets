@@ -1,0 +1,21 @@
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Cache files
+._*
+Thumbs.db
+.sass-cache
+
+# Sublime files
+*sublime*
+
+# Dependencies
+node_modules
+bower_components
+
+# Vim sessions
+.session.vim
+
+# Compiled JS
+public/scripts/app.js
