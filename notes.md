@@ -10,12 +10,11 @@
 
 - Views
   - AppView
-    - HintView
-      - LeftHintView
-      - RightHintView
+    - HintView (x2)
     - TimerView
     - QuestionView
       - AnswerView
+        -AnswerEntryView (x4)
 - Controllers
   - LobbyController
   - QuizController

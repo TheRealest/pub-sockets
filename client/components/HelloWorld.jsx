@@ -1,6 +1,5 @@
 var React = require('react');
 
-console.log('FUCKCKKCK');
 module.exports = React.createClass({
   render: function() {
     return (
