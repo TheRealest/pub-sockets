@@ -8,24 +8,36 @@
 
 ### MVP
 
-- Views
-  - AppView
-    - HintView
-      - LeftHintView
-      - RightHintView
-    - TimerView
-    - QuestionView
-      - AnswerView
-- Controllers
-  - LobbyController
-  - QuizController
-- Services
-  - QuizService
-
+- Client
+  - Views
+    - AppView
+      - HintView (x2)
+      - TimerView
+      - QuestionView
+        - AnswerView
+          -AnswerEntryView (x4)
+  - Controllers
+    - LobbyController
+    - QuizController
+  - Models
+    - QuizModel
+  - Sockets
+    - ClientSocketManager
 - Server
-  - Database (MongoDB)
+  - DatabaseManager (MongoDB)
     - Questions
       - Hints
       - Answers
-  - SocketIO
-  - Express (static file server)
+  - ServerSocketManager (SocketIO)
+  - Static File Server (Express)
+  - Router (Express)
+
+### Extra features
+
+- Super questions
+  -Implementations:
+    -Every once in a while, a question will give 5 extra seconds
+    -If you answer a question correctly in the first 5 seconds, you get an extra 3 seconds
+      -If you answer it wrong you lose more, or something
+
+browserify -t reactify client/app.js -o public/scripts/app.js --debug
