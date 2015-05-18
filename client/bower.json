@@ -1,0 +1,19 @@
+{
+  "name": "pub-sockets",
+  "version": "0.1.0",
+  "homepage": "https://github.com/TheRealest/pub-sockets",
+  "authors": [
+    "Réal Provencher",
+    "Nick McCormick"
+  ],
+  "description": "pub quiz game",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
