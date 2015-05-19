@@ -22,6 +22,8 @@
     "gulp-concat": "^2.5.2",
     "gulp-streamify": "0.0.5",
     "jquery": "^2.1.4",
+    "mongodb": "^2.0.32",
+    "monk": "^1.0.1",
     "react": "^0.13.3",
     "reactify": "^1.1.1",
     "underscore": "^1.8.3",

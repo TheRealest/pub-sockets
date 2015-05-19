@@ -5,10 +5,18 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var mongo = require('mongodb');
+var monk = require('monk');
+var dbConfig = require('../db/mongolab.config'); 
+var db = monk(connectionString);
+
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+var questionList = db.get('TestQuestions');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
