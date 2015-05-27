@@ -5,14 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var mongo = require('mongodb');
-var monk = require('monk');
-var dbConfig = require('./db/mongolab.config'); 
-var db = monk(dbConfig);
-
 var app = express();
-
-var questionList = db.get('TestQuestions');
 
 // uncomment after placing your favicon in /public
 app.use(favicon(__dirname + '/public/favicon.ico'));
