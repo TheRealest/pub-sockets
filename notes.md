@@ -44,8 +44,5 @@ browserify -t reactify client/app.js -o public/scripts/app.js --debug
 
 ### TODO
 
-- set up gulp (R)
-- fill in client skeleton/styling (N)
-- set up server model/skeleton (N)
-- set up websockets (R&N)
 - set up db
+- game logic

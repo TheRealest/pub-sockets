@@ -31,7 +31,7 @@ module.exports = React.createClass({
       var answerRerender = this.answerRerender;
       var id = this.props.id;
       return (
-        <div>
+        <div id="questionView">
           <p>
             {this.props.question}
           </p>
@@ -40,7 +40,7 @@ module.exports = React.createClass({
               return (<AnswerEntryView answer={entry} 
                        index={index} 
                        correct={index===correctIndex}
-                       answerHandler={answerRerender.bind(this)}
+                       answerHandler={this.answerRerender}
                        questionId={id}  /> 
               )}    //http://facebook.github.io/react/docs/multiple-components.html#dynamic-children
             )}

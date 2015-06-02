@@ -7,33 +7,19 @@ var socketInterface = require('../ClientSocketManager.js');
 
 module.exports = React.createClass({
   getInitialState: function() {
-    //testing
-      
-      return {
-        question : "When was the war of 1812?",
-        answers : ['1968', '1492', '1999', '1812'],
-        hints : ['Not in this century', 'Not an odd number'],
-        timeData : {
-          yourTimeLeft : 127,
-          enemyTimeLeft : 132,
-          yourScore : 10,
-          enemyScore : 10
-        },
-        correctIndex: 3,
-        id: 0
-      };
-
-    // return  {
-    //   question : "Loading!",
-    //   answers : [],
-    //   hints : [],
-    //   timeData : {},
-    //   correctIndex: 0,
-    //   id: 0
-    // }
+    return  {
+      question : "Loading!",
+      answers : [],
+      hint1 : '',
+      hint2 : '',
+      timeData : {},
+      gameStart : null,
+      correctIndex: 0,
+      id: 0
+    }
   },
   componentDidMount : function() {
-    socketInterface.addNewDataListener(this.updateData.bind(this));
+    socketInterface.addNewDataListener(this.updateData);
   },
   updateData : function(data) {
     this.setState(data);
@@ -41,12 +27,11 @@ module.exports = React.createClass({
   },
   render: function() {
     return (
-      <div>
-        
-        <HintView hint={this.state.hints[0]} />
-        <HintView hint={this.state.hints[1]} />
+      <div id="AppView">
+        <HintView hint={this.state.hint1} />
+        <HintView hint={this.state.hint2} />
 
-        <TimerView time={this.state.timeData} />
+        <TimerView time={this.state.timeData} gameStart={this.state.gameStart} scores={this.state.scoreData} />
 
         <QuestionView question={this.state.question} 
                       answers={this.state.answers}
