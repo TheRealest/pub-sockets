@@ -7,7 +7,7 @@
 var app = require('../server');
 var debug = require('debug')('server:server');
 var http = require('http');
-var sockets = require('../CoolerSocketManager.js');
+var sockets = require('../GameManager.js');
 
 /**
  * Get port from environment and store in Express.
@@ -24,9 +24,6 @@ var server = http.createServer(app);
 
 
 sockets.init(server);
-
-console.log('socket object:')
-console.log(sockets);
 
 
 /**

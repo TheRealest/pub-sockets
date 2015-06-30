@@ -1,0 +1,27 @@
+body {
+  background-color: #fff;
+  border: 1px solid black; }
+
+#AppView {
+  height: 100%;
+  width: 100%; }
+
+.hint-view {
+  width: 49%;
+  height: 40%;
+  background-color: #a0a;
+  display: inline-block;
+  border: 1px solid black; }
+
+.timerViewQuarter {
+  width: 24%;
+  height: 10%;
+  background-color: #aa0;
+  display: inline-block;
+  border: 1px solid black; }
+
+li {
+  background-color: #0aa; }
+
+#questionView {
+  height: 50%; }
